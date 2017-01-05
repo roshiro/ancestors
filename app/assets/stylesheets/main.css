@@ -1,3 +1,7 @@
+button:focus, input:focus {
+  outline-width: 0;
+}
+
 .ancient-wrapper {
   display: flex;
   flex-direction: column;
@@ -24,6 +28,42 @@
   text-align: center;
 }
 
-.ancient-wrapper .search-box input {
+.ancient-wrapper .search-box {
+  align-self: flex-end;
+  height: 30px;
+}
 
+.ancient-wrapper .search-box input {
+  line-height: 18px;
+  border-radius: 2px;
+  border: 1px solid lightgrey;
+  padding: 2px 4px;
+}
+
+.ancient-wrapper .search-box button {
+  height: 24px;
+  border: 0px;
+  border-radius: 2px;
+}
+.ancient-wrapper .search-box button:hover {
+  background: lightgrey;
+}
+.ancient-wrapper .search-box button:active {
+  background: darkgrey;
+}
+
+.ancient-wrapper #show-error {
+  color: blue;
+  cursor: pointer;
+  line-height: 35px;
+  justify-content: ;
+  text-decoration: none;
+}
+
+.ancient-wrapper #show-error:visited {
+  color: blue;
+}
+
+.ancient-wrapper #error-msg {
+  color: red;
 }

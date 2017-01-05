@@ -12,10 +12,15 @@
   <div class="ancient-wrapper">
     <h1>Ancients</h1>
     <div class="search-box">
-      <input type="text" placeholder="Search" name="search-term" id="search-term">
+      <form>
+        <input type="text" placeholder="Search" name="search-term" id="search-term">
+        <button type="submit" id="search-btn">Search</button>
+      </form>
     </div>
 
     <div id="target"></div>
+    <a id="show-error">Show Error</a>
+    <div id="error-msg"></div>
   </div>
 
   <script id="template" type="x-tmpl-mustache">
@@ -42,7 +47,7 @@
   <script src="app/bower_components/mustache/mustache.min.js"></script>
   <script src="app/assets/js/main.js"></script>
   <script>
-    window.ancestors.init();
+    window.ancients.init();
   </script>
 </body>
 </html>
