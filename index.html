@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Ancients</title>
+  <link rel="stylesheet" href="app/assets/stylesheets/main.css">
+</head>
+
+<body>
+  <div class="ancient-wrapper">
+    <h1>Ancients</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Search" name="search-term" id="search-term">
+    </div>
+
+    <div id="target"></div>
+  </div>
+
+  <script id="template" type="x-tmpl-mustache">
+    <table class="ancestor-list">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Superpower</th>
+          <th>End of an Era</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#.}}
+        <tr>
+          <td>{{ name }}</td>
+          <td>{{ superpower }}</td>
+          <td class="time">{{ end_of_an_era }}</td>
+        </tr>
+        {{/.}}
+      <tbody>
+    </table>
+  </script>
+  <script src="app/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="app/bower_components/mustache/mustache.min.js"></script>
+  <script src="app/assets/js/main.js"></script>
+  <script>
+    window.ancestors.init();
+  </script>
+</body>
+</html>

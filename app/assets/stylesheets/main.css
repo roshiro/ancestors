@@ -1,0 +1,29 @@
+.ancient-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 700px;
+}
+
+.ancient-wrapper table.ancestor-list {
+  border: 2px solid lightgrey;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.ancient-wrapper table.ancestor-list thead {
+  background-color: lightcyan;
+  color: darkcyan;
+}
+
+.ancient-wrapper table.ancestor-list tr {
+  line-height: 25px;
+}
+
+.ancient-wrapper table.ancestor-list tr .time {
+  text-align: center;
+}
+
+.ancient-wrapper .search-box input {
+
+}
