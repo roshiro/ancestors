@@ -1,0 +1,69 @@
+button:focus, input:focus {
+  outline-width: 0;
+}
+
+.ancient-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 700px;
+
+  table.ancestor-list {
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    width: 100%;
+
+    thead {
+      background-color: lightcyan;
+      color: darkcyan;
+    }
+
+    tr {
+      line-height: 25px;
+      .time {
+        text-align: center;
+      }
+    }
+  }
+
+  .search-box {
+    align-self: flex-end;
+    height: 30px;
+
+    input {
+      line-height: 18px;
+      border-radius: 2px;
+      border: 1px solid lightgrey;
+      padding: 2px 4px;
+    }
+
+    button {
+      height: 24px;
+      border: 0px;
+      border-radius: 2px;
+
+      &:hover {
+        background: lightgrey;
+      }
+
+      &:active {
+        background: darkgrey;
+      }
+    }
+  }
+
+  #show-error {
+    color: blue;
+    cursor: pointer;
+    line-height: 35px;
+    text-decoration: none;
+
+    &:visited {
+      color: blue;
+    }
+  }
+
+  #error-msg {
+    color: red;
+  }
+}

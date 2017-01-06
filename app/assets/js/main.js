@@ -1,6 +1,6 @@
 (function() {
   window.cache = {}
-  let URL = 'https://athena-7.herokuapp.com/ancients.json';
+  const URL = 'https://athena-7.herokuapp.com/ancients.json';
 
   var getAncients = (search) => {
     return $.get(URL, { search: search })
