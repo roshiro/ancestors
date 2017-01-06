@@ -1,0 +1,22 @@
+{
+  "name": "ancients",
+  "description": "``` bower install ```",
+  "main": "index.js",
+  "authors": [
+    "Rafael Oshiro <rafael.oshiro@sage.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/roshiro/ancients",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "mustache.js": "mustache#^2.3.0"
+  }
+}
