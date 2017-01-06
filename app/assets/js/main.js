@@ -1,34 +1,19 @@
 (function() {
-  window.cache = {}
+  var cache = require('./cache')
+
+  // window.cache = {}
   const URL = 'https://athena-7.herokuapp.com/ancients.json';
 
   var getAncients = (search) => {
     return $.get(URL, { search: search })
       .always((data) => {
         if(search)
-          cacheResultFor(search, data.ancients);
+          cache.cacheResultFor(search, data.ancients);
       });
   },
 
   getError = () => {
     return $.get(URL, { error: "true" });
-  },
-
-  // Check if local cache has $searchTerm key
-  hasCachedResultFor = (searchTerm) => {
-    return cache.hasOwnProperty(searchTerm);
-  },
-
-  // Returns local cache has $searchTerm key
-  getCachedResultFor = (searchTerm) => {
-    console.log('accessing cache');
-    return cache[searchTerm];
-  },
-
-  // Caches the $result, with the $searchTerm as key.
-  cacheResultFor = (searchTerm, result) => {
-    console.log('caching result')
-    return cache[searchTerm] = result;
   },
 
   populateGrid = (data) => {
@@ -49,10 +34,10 @@
     $('#show-error').on('click', (e) => {
       window.ancients.showError();
     });
-  };
+  },
 
-  function formatAncestorList(list){
-    return (list.ancients || list).map(function(item) {
+  formatAncestorList = (list) => {
+    return (list.ancients || list).map((item) => {
       return {
         name: item.name.toUpperCase(),
         superpower: item.superpower.toUpperCase(),
@@ -76,8 +61,8 @@
      */
     search: (searchTerm) => {
       // If search term is already cached, use it.
-      if(hasCachedResultFor(searchTerm)) {
-        populateGrid(getCachedResultFor(searchTerm));
+      if(cache.hasCachedResultFor(searchTerm)) {
+        populateGrid(cache.getCachedResultFor(searchTerm));
       } else {
         getAncients(searchTerm).done(populateGrid);
       }
