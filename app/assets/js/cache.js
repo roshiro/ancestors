@@ -16,10 +16,15 @@ getCachedResultFor = (searchTerm) => {
 cacheResultFor = (searchTerm, result) => {
   console.log('caching result')
   return cache[searchTerm] = result;
+},
+
+flushCache = () => {
+  cache = {};
 };
 
 module.exports = {
   hasCachedResultFor: hasCachedResultFor,
   getCachedResultFor: getCachedResultFor,
-  cacheResultFor: cacheResultFor
+  cacheResultFor: cacheResultFor,
+  flushCache: flushCache
 }

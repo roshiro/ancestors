@@ -13,6 +13,7 @@
     "bower": "^1.8.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "jasmine": "^2.5.2",
     "local-web-server": "^1.2.6",
     "node-sass": "^4.1.1",
     "sass-loader": "^4.1.1",
@@ -23,7 +24,7 @@
     "start": "ws",
     "webpack": "webpack",
     "postinstall": "bower install && webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
